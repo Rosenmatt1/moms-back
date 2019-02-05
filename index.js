@@ -11,7 +11,13 @@ app.use(parser.json())
 
 
 app.get('/', function(req, res, next){
-     res.send('bad bitch iz working')
+     knex('reminders')
+     .then((rows) => {
+         res.send(rows)
+     })
+     .catch((err) => {
+         next(err)
+     })
 })
 
 app.listen(port, function() {
