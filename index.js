@@ -11,10 +11,6 @@ app.use(parser.json())
 
 
 
-knex('reminders')
-.insert({name: 'chores', description: 'sweep, bitch'})
-
-
 app.get('/', function(req, res, next){
      knex('reminders')
      .then((rows) => {
@@ -55,6 +51,18 @@ app.post('/reminders', (req, res, next) => {
     })
     .catch((err) => {
       next(err);
+    });
+})
+
+app.delete('/reminders/:id', (req, res, next) => {
+    knex('reminders')
+    .where({ 'id' : req.params.id })
+    .del()
+    .then((reminder) => {
+        res.send("Delete Successful");
+    })
+    .catch((err) => {
+        next(err);
     });
 })
 
