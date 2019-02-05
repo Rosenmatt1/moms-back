@@ -1,0 +1,25 @@
+{
+  "name": "moms-back",
+  "version": "1.0.0",
+  "description": "create caroline's branch",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cburns21/moms-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cburns21/moms-back/issues"
+  },
+  "homepage": "https://github.com/cburns21/moms-back#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "pg": "^7.8.0"
+  }
+}
