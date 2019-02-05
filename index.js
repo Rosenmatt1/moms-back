@@ -9,12 +9,11 @@ const dotenv = require('dotenv').config()
 app.use(cors())
 app.use(parser.json())
 
-// app.post('/my-post-route', (req, res) => {
-//     res.send(`You hit /my-post-route with the following message: ${req.body.message}`)
-//   })
 
-  knex('reminders')
+
+knex('reminders')
 .insert({name: 'chores', description: 'sweep, bitch'})
+
 
 app.get('/', function(req, res, next){
      knex('reminders')
@@ -25,6 +24,29 @@ app.get('/', function(req, res, next){
          next(err)
      })
 })
+
+app.get('/reminders/:id', (req, res, next) => {
+    knex.select('name').from('reminders').where('id',req.params.id)
+    .then((rows) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      next(err);
+    });
+  })
+
+  app.patch('/reminders/:id', (req, res, next) => {
+    knex('reminders')
+    .where({'id' : req.params.id})
+    .update({name :"Sweep"})
+    .returning('*')
+    .then((rows) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      next(err);
+    });
+  })
 
 app.post('/reminders', (req, res, next) => {
     knex('reminders').insert(req.body)
