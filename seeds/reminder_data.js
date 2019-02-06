@@ -46,6 +46,11 @@ exports.seed = function(knex, Promise) {
           name: "Call Mom",
           description: "One of these days I'm not going to be around, then you'll miss me."
       }
-      ]);
-    });
+      ])
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('reminders_id_seq', (SELECT MAX(id) FROM reminders))"
+      )
+    })
 };
