@@ -23,7 +23,7 @@ app.get('/', function(req, res, next){
 app.get('/reminders/:id', (req, res, next) => {
     knex.select('name').from('reminders').where('id',req.params.id)
     .then((rows) => {
-      res.send(rows);
+      res.send(reminder);
     })
     .catch((err) => {
       next(err);
