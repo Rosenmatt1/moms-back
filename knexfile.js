@@ -2,7 +2,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/reminders_db2'
+    connection: 'postgres://localhost/howlr'
     
   },
 
