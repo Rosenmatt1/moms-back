@@ -1,7 +1,7 @@
 {
   "name": "moms-back",
   "version": "1.0.0",
-  "description": "create caroline's branch",
+  "description": "Reminders app for group work",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
