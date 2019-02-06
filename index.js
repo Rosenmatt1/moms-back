@@ -12,8 +12,8 @@ app.use(parser.json())
 
 app.get('/', function(req, res, next){
      knex('reminders')
-     .then((rows) => {
-         res.send(rows)
+     .then((reminder) => {
+         res.send("Here are your reminders")
      })
      .catch((err) => {
          next(err)
@@ -22,7 +22,7 @@ app.get('/', function(req, res, next){
 
 app.get('/reminders/:id', (req, res, next) => {
     knex.select('name').from('reminders').where('id',req.params.id)
-    .then((rows) => {
+    .then((reminder) => {
       res.send(reminder);
     })
     .catch((err) => {
@@ -35,8 +35,8 @@ app.get('/reminders/:id', (req, res, next) => {
     .where({'id' : req.params.id})
     .update({name :"Sweep"})
     .returning('*')
-    .then((rows) => {
-      res.send(rows);
+    .then((reminder) => {
+      res.send("Updated reminder");
     })
     .catch((err) => {
       next(err);
@@ -45,8 +45,8 @@ app.get('/reminders/:id', (req, res, next) => {
 
 app.post('/reminders', (req, res, next) => {
     knex('reminders').insert(req.body)
-    .then((rows) => {
-      res.send(rows);
+    .then((reminders) => {
+      res.send("Added reminder");
     })
     .catch((err) => {
       next(err);
