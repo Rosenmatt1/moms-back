@@ -71,5 +71,5 @@ app.use(function (req, res, next) {
 })
 
 app.listen(port, function() {
-     console.log(`listening on port ${port}`, this.address().port, app.settings.env)
+     console.log(`listening on port ${port}`)
 })
