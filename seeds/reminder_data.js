@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
       },
       {
           name: "School",
-          description: "Can't always count on a sugar daddy. Turn off that damned Netflix and do some homework. ",
+          description: "Can't always count on a sugar daddy. Turn off that damned Netflix and do some homework.",
           date: "Mon Feb 11 2019" 
       }
       ])
