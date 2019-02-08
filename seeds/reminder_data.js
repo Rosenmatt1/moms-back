@@ -5,67 +5,18 @@ exports.seed = function(knex, Promise) {
         {
           name: "Laundry",
           description: "Your laundry is getting moldy.",
-          date: "future"
-          
-      },
-      {
-          name: "Work",
-          description: "Pay your Bills. Do you really want to move back in with mom??",
-          date: "future"
+          date: "Sat Feb 09 2019"
           
       },
       {
           name: "Gym",
           description: "Hmmmmm, those pants are getting kinda tight.",
-          date: "future"
-          
+          date: "Sat Feb 09 2019"
       },
       {
           name: "School",
           description: "Can't always count on a sugar daddy. Turn off that damned Netflix and do some homework. ",
-          date: "future"
-          
-      },
-      {
-          name: "Groceries",
-          description: "You're looking a little skinny, fridge is empty again. Make sure you buy something green this time.",
-          date: "future"
-          
-      },
-      {
-          name: "Clean",
-          description: "How are you going to get a boyfriend if you cant even clean your room?",
-          date: "future"
-          
-      },
-      {
-          name: "Socialize",
-          description: "When was the last time you saw the sun?",
-          date: "future"
-          
-      },
-      {
-          name: "Pets",
-          description: "How are you going to take care of a pet if you can't even take care of yourself?",
-          date: "future"
-          
-      },
-      {
-          name: "Trash",
-          description: "Time to take out all the trash, including that good for nothing ex.",
-          date: "future"
-          
-      },
-      {
-          name: "That Thing",
-          description: "Remember that thing you didn't want to go to but agreed to anyways? It's time.",
-          date: "future"
-        
-      },
-      {
-          name: "Call Mom",
-          description: "One of these days I'm not going to be around, then you'll miss me.",
-          date: "future"
+          date: "Mon Feb 11 2019"
           
       }
       ])
