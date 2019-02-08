@@ -5,8 +5,7 @@ exports.seed = function(knex, Promise) {
         {
           name: "Laundry",
           description: "Your laundry is getting moldy.",
-          date: "Sat Feb 09 2019"
-          
+          date: "Sat Feb 09 2019"   
       },
       {
           name: "Gym",
@@ -16,8 +15,7 @@ exports.seed = function(knex, Promise) {
       {
           name: "School",
           description: "Can't always count on a sugar daddy. Turn off that damned Netflix and do some homework. ",
-          date: "Mon Feb 11 2019"
-          
+          date: "Mon Feb 11 2019" 
       }
       ])
     })
