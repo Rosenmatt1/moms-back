@@ -13,7 +13,7 @@ app.use(parser.json())
 app.get('/', function(req, res, next){
      knex('reminders')
      .then((reminder) => {
-         res.send("Here are your reminders")
+         res.send(reminder)
      })
      .catch((err) => {
          next(err)
